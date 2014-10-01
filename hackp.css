@@ -1,1 +1,12 @@
 /* CSS declarations go here */
+body {
+	background-color: #314242;
+	color: white;
+  font-family: 'Helvetica Neue', Helvetica, "Open Sans", Arial, sans-serif;
+}
+
+.drop {
+	background-image: "/public/logo.png";
+	height: 500px;
+  width: 500px;
+}

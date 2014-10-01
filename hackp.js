@@ -1,3 +1,5 @@
+//Cat = new Meteor.Collection("cat");
+
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
     return "Welcome to hackp.";
@@ -14,6 +16,12 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+    /*if (Cat.find().count() === 0) {
+      var cats = ["cat1",
+                  "cat2",
+                  "cat3"];
+      for (var i = 0; i < cats.length; i++)
+        Cat.insert({name: names[i]});
+    }*/
   });
 }
