@@ -13,7 +13,7 @@ body {
     user-select: none;
 }
 
-h1 h2 {
+h1, h2 {
   text-align: center;
 }
 
@@ -31,10 +31,15 @@ h1 h2 {
   border-width: 0px;
 }
 
+.question input[submit] {
+  padding-left:2.5%;
+}
+
 #drop {
   background-color: #ff9c5f;;
   width:500px;
-  height:500px;
+  height:450px;
+  padding-top: 50px;
   margin-left: -webkit-calc(50% - 250px);
 }
 #outer {
