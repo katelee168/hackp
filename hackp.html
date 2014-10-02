@@ -14,11 +14,15 @@
 </body>
 
 <template name="form">
-  <div class="new_player">
-    <input id="new_player_name" type="text" />
-    <input type="button" class="add" value="Add Player" />
+  <div class="question">
+    <input id="q" placeholder="question" type="text" maxlength="500" /><br>
+    <input id="name" placeholder="name" type="text" /><br>
+    <input id="phone" placeholder="phone number" type="text"/><br>
+    <input id="team" placeholder="team name" type="text"/><br>
+    <input type="button" class="add" value="Ask Question!"/>
   </div>
 </template>
+
 <template name="leaderboard">
   <div class="leaderboard">
     {{#each players}}

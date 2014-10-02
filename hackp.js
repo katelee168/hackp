@@ -29,10 +29,10 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.new_player.events = {
+  Template.question.events = {
     'click input.add': function () {
-    var new_player_name = document.getElementById("new_player_name").value;
-    Players.insert({name: new_player_name, score: 0});
+    var name = document.getElementById("name").value;
+    Players.insert({name: name, score: 0});
     }
   };
 }
