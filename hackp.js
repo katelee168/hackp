@@ -28,6 +28,13 @@ if (Meteor.isClient) {
       Session.set("selected_player", this._id);
     }
   });
+
+  Template.new_player.events = {
+    'click input.add': function () {
+    var new_player_name = document.getElementById("new_player_name").value;
+    Players.insert({name: new_player_name, score: 0});
+    }
+  };
 }
 
 // On server startup, create some players if the database is empty.

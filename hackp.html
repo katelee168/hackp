@@ -4,10 +4,21 @@
 
 <body>
   <div id="outer">
-    {{> leaderboard}}
+    <h1>HackPrinceton</h1>
+    <h2>Hackers</h2>
+    <div id="drop">
+      <img src="logo.png">
+      {{> form }}
+    </div>
   </div>
 </body>
 
+<template name="form">
+  <div class="new_player">
+    <input id="new_player_name" type="text" />
+    <input type="button" class="add" value="Add Player" />
+  </div>
+</template>
 <template name="leaderboard">
   <div class="leaderboard">
     {{#each players}}

@@ -13,6 +13,12 @@ body {
     user-select: none;
 }
 
+#drop {
+  background-color:white;
+  width:500px;
+  height:500px;
+  margin-left: -webkit-calc(50% - 250px);
+}
 #outer {
     width: 600px;
     margin: 0 auto;
