@@ -1,5 +1,5 @@
 <head>
-  <title>Leaderboard</title>
+  <title>HackPrinceton: Hackers</title>
 </head>
 
 <body>
@@ -9,10 +9,29 @@
     <br/>
     <img src="logo.png" width="50%">
     <div id="drop">
+      {{> leaderboard}}
       {{> form }}
     </div>
   </div>
 </body>
+
+<template name="leaderboard">
+  <div class="leaderboard">
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </div>
+  <span class="name">Selected is: {{selected_name}}</span>
+</template>
+
+<template name="player">
+  <div class="player {{selected}}">
+    <span class="name">{{name}}</span>
+    <span class="chosen">{{chosen}}</span>
+    
+  </div>
+</template>
+
 
 <template name="form">
   <div class="question">

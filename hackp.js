@@ -1,15 +1,15 @@
 // Set up a collection to contain player information. On the server,
 // it is backed by a MongoDB collection named "players".
 
-Players = new Meteor.Collection("players");
+Categories = new Meteor.Collection("players");
 
 if (Meteor.isClient) {
   Template.leaderboard.players = function () {
-    return Players.find({}, {sort: {score: -1, name: 1}});
+    return Categories.find().fetch();
   };
 
   Template.leaderboard.selected_name = function () {
-    var player = Players.findOne(Session.get("selected_player"));
+    var player = Categories.findOne(Session.get("selected_player"));
     return player && player.name;
   };
 
@@ -19,7 +19,7 @@ if (Meteor.isClient) {
 
   Template.leaderboard.events({
     'click input.inc': function () {
-      Players.update(Session.get("selected_player"), {$inc: {score: 5}});
+      Categories.update(Session.get("selected_player"), {chosen: true});
     }
   });
 
@@ -29,26 +29,15 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.question.events = {
-    'click input.add': function () {
-    var name = document.getElementById("name").value;
-    Players.insert({name: name, score: 0});
-    }
-  };
 }
 
 // On server startup, create some players if the database is empty.
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    if (Players.find().count() === 0) {
-      var names = ["Ada Lovelace",
-                   "Grace Hopper",
-                   "Marie Curie",
-                   "Carl Friedrich Gauss",
-                   "Nikola Tesla",
-                   "Claude Shannon"];
+    if (Categories.find().count() === 0) {
+      var names = ["cat1, cat2, cat3"];
       for (var i = 0; i < names.length; i++)
-        Players.insert({name: names[i], score: Math.floor(Random.fraction()*10)*5});
+        Categories.insert({name: names[i], chosen: false});
     }
   });
 }
