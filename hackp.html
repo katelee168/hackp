@@ -7,6 +7,7 @@
     <h1>HackPrinceton</h1>
     <h2>Hackers</h2>
     <br/>
+    <img src="logo.png" width="50%">
     <div id="drop">
       {{> form }}
     </div>
@@ -15,35 +16,10 @@
 
 <template name="form">
   <div class="question">
-    <input id="q" placeholder="question" type="text" cols="50" rows="10" /><br>
-    <input id="name" placeholder="name" type="text" /><br>
-    <input id="phone" placeholder="phone number" type="text"/><br>
+    <input id="name" placeholder="name" type="text"/><br>
     <input id="team" placeholder="team name" type="text"/><br>
-    <input type="button" class="add" value="Ask Question!"/>
+    <input id="phone" placeholder="phone number" type="tel"/><br>
+    <textarea id="q" placeholder="question" type="text" cols=50 rows=13></textarea><br>
+    <input type="button" id="submit" value="Ask Question!"/>
   </div>
 </template>
-
-<template name="leaderboard">
-  <div class="leaderboard">
-    {{#each players}}
-      {{> player}}
-    {{/each}}
-  </div>
-
-  {{#if selected_name}}
-  <div class="details">
-    <div class="name">{{selected_name}}</div>
-    <input type="button" class="inc" value="Give 5 points" />
-  </div>
-  {{else}}
-  <div class="none">Click a player to select</div>
-  {{/if}}
-</template>
-
-<template name="player">
-  <div class="player {{selected}}">
-    <span class="name">{{name}}</span>
-    <span class="score">{{score}}</span>
-  </div>
-</template>
-

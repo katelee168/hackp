@@ -17,13 +17,18 @@ h1, h2 {
   text-align: center;
 }
 
-.question input{
-  width:70%;
-  margin-left:12.5%;
+#outer img {
+  z-index: -1;
+  position: absolute;
+}
+
+.question input, textarea{
+  width:100%;
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 5px;
 
   background-color: rgba(255,255,255,.75);
   color: #314242;
@@ -31,17 +36,41 @@ h1, h2 {
   border-width: 0px;
 }
 
-.question input[submit] {
-  padding-left:2.5%;
+/* Form styling for cascade */
+#name {
+  margin-left:30%;
+  width: 70%;
 }
 
+#team {
+  margin-left: 18%;
+  width:82%;
+}
+
+#phone {
+  margin-left: 10%;
+  width:90%;
+}
+
+#q {
+  margin-left: 4%;
+  width:96%;
+}
+
+#submit {
+  margin-left: 30%;
+  width:50%;
+}
+
+/* End form styling */
+
 #drop {
-  background-color: #ff9c5f;;
   width:500px;
   height:450px;
   padding-top: 50px;
   margin-left: -webkit-calc(50% - 250px);
 }
+
 #outer {
     width: 600px;
     margin: 0 auto;
