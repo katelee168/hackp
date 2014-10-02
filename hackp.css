@@ -13,17 +13,26 @@ body {
     user-select: none;
 }
 
-.question input{
-  width:75%;
-  margin-left:12.5%;
+h1 h2 {
+  text-align: center;
 }
 
-#q {
-  height:100px;
+.question input{
+  width:70%;
+  margin-left:12.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: rgba(255,255,255,.75);
+  color: #314242;
+  border-radius: 5px;
+  border-width: 0px;
 }
 
 #drop {
-  background-color:white;
+  background-color: #ff9c5f;;
   width:500px;
   height:500px;
   margin-left: -webkit-calc(50% - 250px);
