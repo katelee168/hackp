@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato','Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #314242;
     color: white;
     font-weight: 200;
@@ -57,7 +57,7 @@ h1, h2 {
   width:96%;
 }
 
-#submit {
+.submit input {
   margin-left: 30%;
   width:50%;
 }

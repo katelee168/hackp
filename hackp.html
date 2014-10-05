@@ -1,5 +1,6 @@
 <head>
   <title>HackPrinceton: Hackers</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -9,8 +10,9 @@
     <br/>
     <img src="logo.png" width="50%">
     <div id="drop">
-      {{> leaderboard}}
       {{> form }}
+      {{> leaderboard}}
+      {{> submit}}
     </div>
   </div>
 </body>
@@ -32,6 +34,11 @@
   </div>
 </template>
 
+<template name='submit'>
+  <div class='submit'>
+    <input type="button" id="submit" value="Ask Question!"/>
+  </div>
+</template>
 
 <template name="form">
   <div class="question">
@@ -39,6 +46,5 @@
     <input id="team" placeholder="team name" type="text"/><br>
     <input id="phone" placeholder="phone number" type="tel"/><br>
     <textarea id="q" placeholder="question" type="text" cols=50 rows=13></textarea><br>
-    <input type="button" id="submit" value="Ask Question!"/>
   </div>
 </template>
