@@ -35,7 +35,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     if (Categories.find().count() === 0) {
-      var names = ["cat1, cat2, cat3"];
+      var names = ["cat1", "cat2", "cat3"];
       for (var i = 0; i < names.length; i++)
         Categories.insert({name: names[i], chosen: false});
     }
