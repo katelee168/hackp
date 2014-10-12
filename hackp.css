@@ -75,3 +75,31 @@ h1, h2 {
     width: 600px;
     margin: 0 auto;
 }
+
+/* Mentor page */
+#mentor-cat {
+  width:100%;
+  padding-bottom: 40px;
+}
+
+#mentor-cat td {
+  width:-webkit-calc(100% / 4); /* #categories*/
+  text-align: center;
+}
+
+#mentor-sortby {
+  width:50%;
+}
+
+#questions {
+  width:100%;
+}
+
+.qu {
+  font-size: 2em;
+  padding-right: 25px;
+}
+
+.expand {
+  text-align: right;
+}
